@@ -1,0 +1,10 @@
+name: example
+steps:
+  - agent: get_html
+    input:
+      url: https://example.com
+      selector: title
+  - agent: parse_html_selectors
+    input:
+      html: "$prev"
+      instruction: "title element"

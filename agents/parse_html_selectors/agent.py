@@ -1,4 +1,4 @@
-from .base_agent import BaseAgent
+from ..base_agent import BaseAgent
 
 
 PROMPT_TEMPLATE = (
@@ -10,7 +10,7 @@ PROMPT_TEMPLATE = (
 )
 
 
-class ParseHtmlSelectorsAgent(BaseAgent):
+class Agent(BaseAgent):
     """Return CSS selector for a given instruction and HTML."""
 
     def process(self, input_data: dict):

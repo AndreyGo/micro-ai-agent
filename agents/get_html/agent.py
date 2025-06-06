@@ -1,8 +1,8 @@
 import bs4
-from .base_agent import BaseAgent
+from ..base_agent import BaseAgent
 
 
-class GetHtmlAgent(BaseAgent):
+class Agent(BaseAgent):
     """Fetch HTML content by CSS selector from a URL."""
 
     def process(self, input_data: dict):
