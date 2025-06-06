@@ -60,3 +60,27 @@ python dispatcher.py run get_html_agent '{"url": "https://example.com", "selecto
 ```
 
 Set `OPENAI_API_KEY` environment variable before running agents that use OpenAI.
+
+## Embedding and Text Correction Service
+
+The repository contains a simple HTTP service that exposes two endpoints using FastAPI:
+
+- `POST /embed` – generate an embedding vector from the provided text using the model `sberbank-ai/sbert_large_nlu_ru`.
+- `POST /correct` – autocorrect the input text with DeepPavlov and return its lemmas.
+
+### Local run
+
+```bash
+uvicorn embedding_service:app --reload
+```
+
+### Docker
+
+Build and run the container:
+
+```bash
+docker build -t embedding-service .
+docker run -p 8000:8000 embedding-service
+```
+
+The service works on CPU only and reads configuration from environment variables when needed.

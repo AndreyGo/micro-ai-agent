@@ -2,3 +2,8 @@ openai
 requests
 PyYAML
 beautifulsoup4
+fastapi
+uvicorn[standard]
+sentence-transformers
+deeppavlov
+nltk
