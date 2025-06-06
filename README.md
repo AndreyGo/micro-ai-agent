@@ -38,3 +38,25 @@
 - Примеры двух агентов включить в дистрибутив.
 - Шаблоны юнит-тестов не требуются.
 
+
+## Usage
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+List available agents:
+
+```bash
+python dispatcher.py list
+```
+
+Run an agent with JSON input:
+
+```bash
+python dispatcher.py run get_html_agent '{"url": "https://example.com", "selector": "title"}'
+```
+
+Set `OPENAI_API_KEY` environment variable before running agents that use OpenAI.
