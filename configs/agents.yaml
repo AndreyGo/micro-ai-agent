@@ -1,0 +1,9 @@
+agents:
+  - name: get_html_agent
+    module: agents.get_html_agent
+    class: GetHtmlAgent
+    config: configs/get_html_agent.yaml
+  - name: parse_html_selectors_agent
+    module: agents.parse_html_selectors_agent
+    class: ParseHtmlSelectorsAgent
+    config: configs/parse_html_selectors_agent.yaml
