@@ -80,6 +80,13 @@ Build and run the container:
 
 ```bash
 docker build -t embedding-service .
+```
+
+If you're using Apple Silicon hardware, add `--platform linux/amd64` to ensure
+prebuilt dependencies install correctly:
+
+```bash
+docker build --platform linux/amd64 -t embedding-service .
 docker run -p 8000:8000 embedding-service
 ```
 
