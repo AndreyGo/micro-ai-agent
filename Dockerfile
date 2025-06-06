@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt ./
 # Upgrade pip to avoid build issues and install Python deps
 RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir numpy==1.23.5 \
     && pip install --no-cache-dir -r requirements.txt
 
 COPY . ./
